@@ -37,13 +37,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+    
+    /* ---- AJUSTE DE ZOOM ---- */
+    /* Cambia este valor para ajustar el zoom. */
+    /* Un número más grande (ej. 150%) lo acerca más. */
+    /* Un número más pequeño (ej. 110%) lo aleja. */
+    width: 120%; 
     height: auto;
-    z-index: -1; /* Lo enviamos detrás de todo el contenido */
-    object-fit: cover; /* Hace que el video cubra todo el espacio sin deformarse */
+    
+    z-index: -1;
 }
+ 
 
 /* 3. Añadimos una capa oscura sobre el video para mejorar legibilidad */
 .header::after {
