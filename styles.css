@@ -42,7 +42,7 @@ body {
     /* Cambia este valor para ajustar el zoom. */
     /* Un número más grande (ej. 150%) lo acerca más. */
     /* Un número más pequeño (ej. 110%) lo aleja. */
-    width: 120%; 
+    width: 108%; 
     height: auto;
     
     z-index: -1;
