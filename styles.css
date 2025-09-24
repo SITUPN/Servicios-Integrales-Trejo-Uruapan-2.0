@@ -1,187 +1,307 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* Importar la fuente Roboto de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PKHJFNLM');</script>
-    <title>Servicios Integrales Trejo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body> 
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKHJFNLM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <header class="header">
-        <nav class="navbar">
-            <a href="#" class="logo-link">
-                <img src="Logo.jpg" alt="Logo de Servicios Integrales Trejo" class="logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#agenda">Agenda</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Estilos generales del cuerpo de la página */
+body {
+    background-color: #121212; /* Fondo gris muy oscuro */
+    color: #e0e0e0; /* Color de texto claro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces */
+}
 
-    <main>
-      <section id="servicios" class="section">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="service-grid">
-                
-                <div class="service-card">
-                    <img src="Plomeria.jpg" alt="Servicio de Plomería" class="service-img">
-                    <h3>Plomería</h3>
-                    <p>Soluciones expertas para fugas, instalaciones y mantenimiento de tuberías.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Plomer%C3%ADa." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
+/* Contenedor principal para centrar el contenido */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-                <div class="service-card">
-                    <img src="Electricidad.jpg" alt="Servicio de Electricidad" class="service-img">
-                    <h3>Electricidad</h3>
-                    <p>Instalaciones, reparaciones y mantenimiento de sistemas eléctricos residenciales.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Electricidad." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
+/* Estilos para el encabezado y la navegación */
+.header {
+    background-color: #1e1e1e; /* Fondo un poco más claro que el body */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
 
-                <div class="service-card">
-                    <h3>Carpintería</h3>
-                    <p>Fabricación y reparación de muebles, puertas y estructuras de madera a la medida.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Carpinter%C3%ADa." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                <div class="service-card">
-                    <img src="Electrodomesticos.jpg" alt="Reparación de Electrodomésticos" class="service-img">
-                    <h3>Reparación de Electrodomésticos</h3>
-                    <p>Diagnóstico y arreglo de lavadoras, refrigeradores, estufas y más.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20la%20Reparaci%C3%B3n%20de%20Electrodom%C3%A9sticos." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
+.logo-link .logo {
+    height: 100px; /* Define la altura de la imagen del logo */
+    width: auto; /* Mantiene la proporción de la imagen */
+}
 
-                <div class="service-card">
-                    <img src="Calentadores.jpg" alt="Servicio de Calentadores Solares" class="service-img">
-                    <h3>Calentadores Solares</h3>
-                    <p>Venta, instalación y mantenimiento de calentadores solares de tubos al vacío.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Calentadores%20Solares." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
 
-                <div class="service-card">
-                    <img src="Aires.jpg" alt="Servicio de Aires Acondicionados" class="service-img">
-                    <h3>Aires Acondicionados</h3>
-                    <p>Venta, instalación y mantenimiento de equipos para climatización.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Aires%20Acondicionados." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Impermeabilización</h3>
-                    <p>Protección duradera para techos y superficies contra la humedad y filtraciones.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Impermeabilizaci%C3%B3n." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
 
-                <div class="service-card">
-                    <h3>Herrería</h3>
-                    <p>Creación y reparación de estructuras metálicas como barandales y portones.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Herrer%C3%ADa." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
-                
-                <div class="service-card">
-                    <img src="Construccion.jpg" alt="Servicio de Construcción" class="service-img">
-                    <h3>Construcción</h3>
-                    <p>Proyectos de construcción y remodelación para hogares y negocios.</p>
-                    <a href="https://wa.me/5214522005085?text=Hola,%20me%20interesa%20el%20servicio%20de%20Construcci%C3%B3n." class="btn btn-whatsapp" target="_blank">Contactar por WhatsApp</a>
-                </div>
+.nav-links a:hover {
+    color: #FF7B00; /* Naranja al pasar el mouse */
+}
 
-            </div>
-        </div>
-    </section>
+/* Estilos para las secciones generales */
+.section {
+    padding: 80px 0;
+}
 
-    <section id="contacto" class="section">
-        <div class="container">
-            <h2 class="section-title">Contáctanos</h2>
-            <form id="contact-form" class="form">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+.section-title {
+    font-size: 2.5rem;
+    color: #007BFF; /* Títulos en azul */
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    font-weight: 700;
+}
 
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono">
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #FF7B00; /* Línea de acento naranja bajo el título */
+    margin: 10px auto 0;
+}
 
-                <label for="correo">Correo Electrónico</label>
-                <input type="email" id="correo" name="correo" required>
+/* Estilos para el grid de servicios */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+.service-card {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
 
-    <section id="agenda" class="section">
-        <div class="container">
-            <h2 class="section-title">Agenda una Cita</h2>
-            <form id="appointment-form" class="form">
-                <label for="nombre-cita">Nombre</label>
-                <input type="text" id="nombre-cita" name="nombre-cita" required>
+.service-img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 180px; /* Altura fija para que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionarla */
+    border-radius: 4px; /* Ligeras esquinas redondeadas para que coincida con la tarjeta */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
 
-                <label for="telefono-cita">Teléfono</label>
-                <input type="tel" id="telefono-cita" name="telefono-cita">
+.service-card h3 {
+    color: #FF7B00; /* Títulos de servicio en naranja */
+    font-size: 1.5rem;
+    margin-top: 0;
+}
 
-                <label for="correo-cita">Correo Electrónico</label>
-                <input type="email" id="correo-cita" name="correo-cita" required>
+/* Estilos para los botones */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
-                <label for="fecha-cita">Fecha</label>
-                <input type="date" id="fecha-cita" name="fecha-cita" required>
+.btn-primary {
+    background-color: #007BFF; /* Botón de formulario en azul */
+    color: #fff;
+}
 
-                <label for="hora-cita">Hora</label>
-                <input type="time" id="hora-cita" name="hora-cita" required>
+.btn-primary:hover {
+    background-color: #0056b3; /* Un azul más oscuro */
+}
 
-                <label for="servicio-cita">Servicio Requerido</label>
-                <textarea id="servicio-cita" name="servicio-cita" rows="3" required></textarea>
+.btn-whatsapp {
+    background-color: #25D366; /* Verde de WhatsApp */
+    color: #fff;
+}
 
-                <button type="submit" class="btn btn-primary">Agendar Cita</button>
-            </form>
-        </div>
-    </section>
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
 
-    <section id="info" class="section">
-        <div class="container">
-            <h2 class="section-title">Información Adicional</h2>
-           <div class="info-content">
-                <p><strong>Datos del Negocio:</strong> Técnicos especialistas en plomería, electricidad, carpintería, reparación de electrodomésticos, calentadores solares, aire acondicionado y herrería. ¡Soluciones completas para tu hogar o negocio! Contáctanos para un servicio profesional y confiable.</p>
-                <p><strong>Facturación:</strong> Sí facturamos nuestros servicios.</p>
-                <p><strong>Métodos de Pago:</strong> Aceptamos pagos con tarjeta y efectivo.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="whatsapp-qr-section">
-        <div class="container">
-            <h2 class="section-title">Contáctanos por WhatsApp</h2>
-            <div class="qr-code-container">
-                <img id="qr-code-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/5214522005085" alt="Código QR de WhatsApp">
-            </div>
-        </div>
-    </section>
-    
-</main>
+/* Estilos para formularios */
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 
-<a href="https://wa.me/5214522005085" class="whatsapp-float-btn" target="_blank">
-    <img src="WhatsApp.png" alt="WhatsApp">
-</a>
-<a href="https://www.facebook.com/share/1GdKU7VeAT" class="facebook-float-btn" target="_blank">
-    <img src="Facebook.png" alt="Facebook">
-</a>
+.form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #e0e0e0;
+}
 
-<footer class="footer">
-    <p>&copy; 2025 Servicios Integrales Trejo. Todos los derechos reservados.</p>
-</footer>
+.form input, .form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    background-color: #2e2e2e;
+    color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no añada al ancho */
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+.form input:focus, .form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Estilos del pie de página */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+}
+
+/* Estilos para la sección del código QR */
+.whatsapp-qr-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.qr-code-container {
+    display: inline-block;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para mejor contraste del QR */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.qr-code-container img {
+    display: block;
+    max-width: 200px;
+    height: auto;
+}
+
+/* =============================================
+   =            Botones Flotantes            =
+   ============================================= */
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366;
+    border-radius: 50px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Botón flotante de Facebook */
+.facebook-float-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 110px; /* Posición encima de WhatsApp */
+    right: 40px;
+    background-color: #1877F2;
+    border-radius: 50px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.facebook-float-btn:hover {
+    transform: scale(1.1);
+}
+
+.facebook-float-btn img {
+    width: 35px; /* Mismo tamaño que el de WhatsApp */
+    height: 35px;
+}
+
+
+/* =============================================
+   =   Ajustes para Dispositivos Móviles     =
+   ============================================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .section {
+        padding: 60px 0;
+    }
+
+    /* AJUSTE PARA BOTONES FLOTANTES EN MÓVIL */
+    .whatsapp-float-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float-btn img {
+        width: 30px;
+        height: 30px;
+    }
+    .facebook-float-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 80px; /* Nueva posición para móvil */
+        right: 20px;
+    }
+    .facebook-float-btn img {
+        width: 30px;
+        height: 30px;
+    }
+}
