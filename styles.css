@@ -3,12 +3,12 @@
 
 /* Estilos generales del cuerpo de la página */
 body {
-    background-color: #121212; /* Fondo gris muy oscuro */
-    color: #e0e0e0; /* Color de texto claro */
+    background-color: #121212;
+    color: #e0e0e0;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     line-height: 1.6;
-    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces */
+    scroll-behavior: smooth;
 }
 
 /* Contenedor principal para centrar el contenido */
@@ -18,25 +18,61 @@ body {
     padding: 0 20px;
 }
 
-/* Estilos para el encabezado y la navegación */
+/* =============================================
+   =        Estilos para Video de Fondo        =
+   ============================================= */
+
+/* 1. Preparamos el contenedor del video (header) */
 .header {
-    background-color: #1e1e1e; /* Fondo un poco más claro que el body */
+    position: relative;
+    overflow: hidden;
+    background-color: #1e1e1e; /* Color de respaldo por si el video no carga */
     padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 10;
 }
 
+/* 2. Damos estilo al video para que ocupe todo el fondo */
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Lo enviamos detrás de todo el contenido */
+    object-fit: cover; /* Hace que el video cubra todo el espacio sin deformarse */
+}
+
+/* 3. Añadimos una capa oscura sobre el video para mejorar legibilidad */
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+    z-index: 0; /* Se pone entre el video y el contenido */
+}
+
+/* 4. Aseguramos que el contenido del menú esté por encima de la capa oscura */
 .navbar {
+    position: relative;
+    z-index: 1; /* Pone el menú y el logo al frente */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* =============================================
+   =       Fin de Estilos de Video             =
+   ============================================= */
+
 .logo-link .logo {
-    height: 100px; /* Define la altura de la imagen del logo */
-    width: auto; /* Mantiene la proporción de la imagen */
+    height: 100px;
+    width: auto;
 }
 
 .nav-links {
@@ -55,17 +91,16 @@ body {
 }
 
 .nav-links a:hover {
-    color: #FF7B00; /* Naranja al pasar el mouse */
+    color: #FF7B00;
 }
 
-/* Estilos para las secciones generales */
 .section {
     padding: 80px 0;
 }
 
 .section-title {
     font-size: 2.5rem;
-    color: #007BFF; /* Títulos en azul */
+    color: #007BFF;
     text-align: center;
     margin-bottom: 50px;
     position: relative;
@@ -77,11 +112,10 @@ body {
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #FF7B00; /* Línea de acento naranja bajo el título */
+    background-color: #FF7B00;
     margin: 10px auto 0;
 }
 
-/* Estilos para el grid de servicios */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -103,20 +137,19 @@ body {
 }
 
 .service-img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-    height: 180px; /* Altura fija para que todas las imágenes tengan el mismo tamaño */
-    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionarla */
-    border-radius: 4px; /* Ligeras esquinas redondeadas para que coincida con la tarjeta */
-    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .service-card h3 {
-    color: #FF7B00; /* Títulos de servicio en naranja */
+    color: #FF7B00;
     font-size: 1.5rem;
     margin-top: 0;
 }
 
-/* Estilos para los botones */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -130,16 +163,16 @@ body {
 }
 
 .btn-primary {
-    background-color: #007BFF; /* Botón de formulario en azul */
+    background-color: #007BFF;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; /* Un azul más oscuro */
+    background-color: #0056b3;
 }
 
 .btn-whatsapp {
-    background-color: #25D366; /* Verde de WhatsApp */
+    background-color: #25D366;
     color: #fff;
 }
 
@@ -147,7 +180,6 @@ body {
     background-color: #128C7E;
 }
 
-/* Estilos para formularios */
 .form {
     max-width: 600px;
     margin: 0 auto;
@@ -172,7 +204,7 @@ body {
     background-color: #2e2e2e;
     color: #fff;
     border-radius: 4px;
-    box-sizing: border-box; /* Asegura que el padding no añada al ancho */
+    box-sizing: border-box;
 }
 
 .form input:focus, .form textarea:focus {
@@ -180,7 +212,6 @@ body {
     border-color: #007BFF;
 }
 
-/* Estilos del pie de página */
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -188,7 +219,6 @@ body {
     border-top: 1px solid #333;
 }
 
-/* Estilos para la sección del código QR */
 .whatsapp-qr-section {
     text-align: center;
     padding: 50px 0;
@@ -197,7 +227,7 @@ body {
 .qr-code-container {
     display: inline-block;
     padding: 20px;
-    background-color: #fff; /* Fondo blanco para mejor contraste del QR */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
@@ -211,8 +241,6 @@ body {
 /* =============================================
    =            Botones Flotantes            =
    ============================================= */
-
-/* Botón flotante de WhatsApp */
 .whatsapp-float-btn {
     position: fixed;
     width: 60px;
@@ -238,12 +266,11 @@ body {
     height: 35px;
 }
 
-/* Botón flotante de Facebook */
 .facebook-float-btn {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 110px; /* Posición encima de WhatsApp */
+    bottom: 110px;
     right: 40px;
     background-color: #1877F2;
     border-radius: 50px;
@@ -260,15 +287,13 @@ body {
 }
 
 .facebook-float-btn img {
-    width: 35px; /* Mismo tamaño que el de WhatsApp */
+    width: 35px;
     height: 35px;
 }
-
 
 /* =============================================
    =   Ajustes para Dispositivos Móviles     =
    ============================================= */
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -283,7 +308,6 @@ body {
         padding: 60px 0;
     }
 
-    /* AJUSTE PARA BOTONES FLOTANTES EN MÓVIL */
     .whatsapp-float-btn {
         width: 50px;
         height: 50px;
@@ -297,7 +321,7 @@ body {
     .facebook-float-btn {
         width: 50px;
         height: 50px;
-        bottom: 80px; /* Nueva posición para móvil */
+        bottom: 80px;
         right: 20px;
     }
     .facebook-float-btn img {
